@@ -14,8 +14,8 @@ npm i tokenize-file -S
 ```js
 var tokenizeFile = require("tokenize-file");
 
-tokenizeFile("path/to/file.txt", function(tokens){
-	console.log(tokens);
+tokenizeFile("path/to/file.txt", tokens => {
+	console.log(tokens.filter(d => !d.stop_word && d.pos !== "N"));
 });
 ```
 
