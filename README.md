@@ -50,7 +50,8 @@ The tokenized data is passed as an array of objects to the callback function. In
 {
 	value: "String", // the token
 	count: Number, // the number of times it appears in the file
-	pos: "String" // the token's Penn Treebank POS tag
+	pos: "String" // the token's Penn Treebank POS tag,
+	stop_word: Boolean // whether the token value is a stop word, which can be filtered out in some analyses
 }
 ```
 
