@@ -15,7 +15,7 @@ npm i tokenize-file -S
 var tokenizeFile = require("tokenize-file");
 
 tokenizeFile("path/to/file.txt", tokens => {
-	console.log(tokens.filter(d => !d.stop_word && d.pos !== "N"));
+  console.log(tokens.filter(d => !d.stop_word && d.pos !== "N"));
 });
 ```
 
@@ -23,9 +23,17 @@ tokenizeFile("path/to/file.txt", tokens => {
 
 <a name="tokenizeFile" href="#tokenizeFile">#</a> ba64.<b>writeImage</b>(<em>path/to/file_name</em>, <em>callback</em>)
 
-Read a file, tokenize it, and spit out the JSON of the tokens.
+Read a file, tokenize it, and spit out the JSON of the tokens. The tokenized data is passed as an array of objects to the callback function. In the array, each token is an object, represented as:
+```
+{
+  value: "String", // the token
+  count: Number, // the number of times it appears in the file
+  pos: "String" // the token's Penn Treebank POS tag,
+  stop_word: Boolean // whether the token value is a stop word, which can be filtered out in some analyses
+}
+```
 
-`tokenizeFile` can read any type of file supported by [textract](https://github.com/dbashford/textract). As of February 2, 2018, it can read:
+`tokenizeFile` can read any type of file supported by [textract](https://github.com/dbashford/textract):
 * HTML, HTM
 * ATOM, RSS
 * Markdown
@@ -44,16 +52,6 @@ Read a file, tokenize it, and spit out the JSON of the tokens.
 * DXF
 * `application/javascript`
 * All `text/*` mime-types.
-
-The tokenized data is passed as an array of objects to the callback function. In the array, each token is an object, represented as
-```
-{
-	value: "String", // the token
-	count: Number, // the number of times it appears in the file
-	pos: "String" // the token's Penn Treebank POS tag,
-	stop_word: Boolean // whether the token value is a stop word, which can be filtered out in some analyses
-}
-```
 
 The POS tags are:
 
