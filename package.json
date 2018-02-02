@@ -1,6 +1,6 @@
 {
   "name": "tokenize-file",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Read a file, tokenize it, and spit out a handy JSON.",
   "main": "index.js",
   "scripts": {
