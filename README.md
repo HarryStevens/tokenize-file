@@ -1,4 +1,5 @@
 # tokenize-file
+[![Build Status](https://travis-ci.org/HarryStevens/tokenize-file.svg?branch=master)](https://travis-ci.org/HarryStevens/tokenize-file) [![Coverage Status](https://coveralls.io/repos/github/HarryStevens/tokenize-file/badge.svg?branch=master)](https://coveralls.io/github/HarryStevens/tokenize-file?branch=master)
 Read a file, tokenize it, and spit out a handy JSON.
 
 ## Installation
@@ -53,6 +54,7 @@ The tokenized data is passed as an array of objects to the callback function. In
 ```
 
 The POS tags are:
+
 | POS Tag | Description | Example |
 | --- | --- | --- |
 | CC | coordinating conjunction | and |
