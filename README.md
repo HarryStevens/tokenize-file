@@ -21,7 +21,7 @@ tokenizeFile("path/to/file.txt", tokens => {
 
 ## API
 
-<a name="tokenizeFile" href="#tokenizeFile">#</a> ba64.<b>writeImage</b>(<em>path/to/file_name</em>, <em>callback</em>)
+<a name="tokenizeFile" href="#tokenizeFile">#</a> <b>tokenizeFile</b>(<em>path/to/file_name</em>, <em>callback</em>)
 
 Read a file, tokenize it, and spit out the JSON of the tokens. The tokenized data is passed as an array of objects to the callback function. In the array, each token is an object, represented as:
 ```
