@@ -9,9 +9,9 @@ module.exports = function(input_file, callback){
     throw new Error("You must specify an input file as the first argument.");
   }
 
-  // no output file
+  // no callback
   else if (input_file && !callback){
-    throw new Error("You must specify an output file as the second argument.");  
+    throw new Error("You must specify a callback function as the second argument.");  
   }
 
   // input file is not a string
@@ -21,7 +21,7 @@ module.exports = function(input_file, callback){
 
   // output file is not a string
   else if (input_file && typeof(input_file) == "string" && callback && typeof(callback) !== "function") {
-    throw new Error("The second argument must be a string.");
+    throw new Error("The second argument must be a function.");
   }
 
   // stop words
